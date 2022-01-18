@@ -105,17 +105,6 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
     },
 
     /**
-     * Get the id of the flavor control where we store the ice cream flavor
-     *
-     * @method _getFlavorControlName
-     * @return {String} the name/id of the flavor form field
-     * @private
-     */
-    _getFlavorControlName: function () {
-      return this.get("host").get("elementid") + "_" + FLAVORCONTROL;
-    },
-
-    /**
      * Display the linktext Dialogue
      *
      * @method _displayDialogue

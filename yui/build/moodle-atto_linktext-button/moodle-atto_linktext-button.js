@@ -17,7 +17,7 @@ YUI.add('moodle-atto_linktext-button', function (Y, NAME) {
 
 /*
  * @package    atto_linktext
- * @copyright  COPYRIGHTINFO
+ * @copyright  shahriar
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -104,17 +104,6 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
         },
         this
       );
-    },
-
-    /**
-     * Get the id of the flavor control where we store the ice cream flavor
-     *
-     * @method _getFlavorControlName
-     * @return {String} the name/id of the flavor form field
-     * @private
-     */
-    _getFlavorControlName: function () {
-      return this.get("host").get("elementid") + "_" + FLAVORCONTROL;
     },
 
     /**
