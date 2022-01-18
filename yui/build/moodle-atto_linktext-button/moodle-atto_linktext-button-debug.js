@@ -17,7 +17,7 @@ YUI.add('moodle-atto_linktext-button', function (Y, NAME) {
 
 /*
  * @package    atto_linktext
- * @copyright  COPYRIGHTINFO
+ * @copyright  shahriar
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -34,7 +34,6 @@ YUI.add('moodle-atto_linktext-button', function (Y, NAME) {
  */
 
 var COMPONENTNAME = "atto_linktext";
-var FLAVORCONTROL = "linktext_flavor";
 var LOGNAME = "atto_linktext";
 var DESCRIPTION = "linktext_description";
 var TITLE = "linktext_title";
@@ -42,13 +41,11 @@ var TITLE = "linktext_title";
 var CSS = {
     INPUTSUBMIT: "atto_media_urlentrysubmit",
     INPUTCANCEL: "atto_media_urlentrycancel",
-    FLAVORCONTROL: "flavorcontrol",
     LINK: "link",
     TITLE: "title",
     DESCRIPTION: "description",
   },
   SELECTORS = {
-    FLAVORCONTROL: ".flavorcontrol",
     LINK: ".link",
     TITLE: ".title",
     DESCRIPTION: ".description",
@@ -107,17 +104,6 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
     },
 
     /**
-     * Get the id of the flavor control where we store the ice cream flavor
-     *
-     * @method _getFlavorControlName
-     * @return {String} the name/id of the flavor form field
-     * @private
-     */
-    _getFlavorControlName: function () {
-      return this.get("host").get("elementid") + "_" + FLAVORCONTROL;
-    },
-
-    /**
      * Display the linktext Dialogue
      *
      * @method _displayDialogue
@@ -164,7 +150,6 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
           template({
             elementid: this.get("host").get("elementid"),
             CSS: CSS,
-            FLAVORCONTROL: FLAVORCONTROL,
             component: COMPONENTNAME,
             defaultlink: this.get("defaultlink"),
             clickedicon: clickedicon,

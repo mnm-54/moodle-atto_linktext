@@ -18,7 +18,7 @@
  * Atto text editor integration version file.
  *
  * @package    atto_linktext
- * @copyright  COPYRIGHTINFO
+ * @copyright  shahriar
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -37,7 +37,6 @@ function atto_linktext_strings_for_js()
 		array(
 			'insert',
 			'cancel',
-			'enterflavor',
 			'dialogtitle',
 			'enterlink',
 			'entertitle',
@@ -73,7 +72,7 @@ function atto_linktext_params_for_js($elementid, $options, $fpoptions)
 	//add our disabled param
 	$params['disabled'] = $disabled;
 
-	//add our default flavor
+	//add our default link
 	$params['defaultlink'] = get_config('atto_linktext', 'defaultlink');
 
 	return $params;
