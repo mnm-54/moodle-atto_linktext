@@ -1,13 +1,13 @@
 # Moodle atto-linktext plugin
 
-- This atto plugin can be used to anchor tag links
+- This atto plugin can be used to create anchor tag links
 
-## Functionality
+## Functionality:
 
 - separate input field for href, title and value
 - opens link in new tab
 
-## QUICK INSTALL
+## Quick Install:
 
 - Put this entire directory at:
 
@@ -17,7 +17,7 @@ PATHTOMOODLE/lib/editors/atto/plugins
 
 Visit your site notifications page to install the new plugins
 
-## Toolbar Settings
+## Toolbar Settings:
 
 ```
  Dashboard -> Site administration -> Plugins -> Text editors -> Atto HTML editor -> Atto toolbar settings
@@ -27,7 +27,7 @@ Visit your site notifications page to install the new plugins
 - ex: `style1 = title, bold, italic, linktext`
 - Now Link text button can be found in editor box.
 
-## NOTE:
+## Note:
 
 - I have used a atto plugin template to develop this plugin
 - template link: https://github.com/justinhunt/moodle-atto_newtemplate
