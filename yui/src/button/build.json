@@ -1,0 +1,10 @@
+{
+    "name": "moodle-atto_linktext-button",
+    "builds": {
+        "moodle-atto_linktext-button": {
+            "jsfiles": [
+                "button.js"
+            ]
+        }
+    }
+}
