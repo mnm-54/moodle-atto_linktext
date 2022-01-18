@@ -34,7 +34,6 @@ YUI.add('moodle-atto_linktext-button', function (Y, NAME) {
  */
 
 var COMPONENTNAME = "atto_linktext";
-var FLAVORCONTROL = "linktext_flavor";
 var LOGNAME = "atto_linktext";
 var DESCRIPTION = "linktext_description";
 var TITLE = "linktext_title";
@@ -42,13 +41,11 @@ var TITLE = "linktext_title";
 var CSS = {
     INPUTSUBMIT: "atto_media_urlentrysubmit",
     INPUTCANCEL: "atto_media_urlentrycancel",
-    FLAVORCONTROL: "flavorcontrol",
     LINK: "link",
     TITLE: "title",
     DESCRIPTION: "description",
   },
   SELECTORS = {
-    FLAVORCONTROL: ".flavorcontrol",
     LINK: ".link",
     TITLE: ".title",
     DESCRIPTION: ".description",
@@ -153,7 +150,6 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
           template({
             elementid: this.get("host").get("elementid"),
             CSS: CSS,
-            FLAVORCONTROL: FLAVORCONTROL,
             component: COMPONENTNAME,
             defaultlink: this.get("defaultlink"),
             clickedicon: clickedicon,
