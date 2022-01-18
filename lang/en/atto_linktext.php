@@ -31,7 +31,6 @@ $string['nothingtoinsert'] = 'Nothing to insert!';
 $string['dialogtitle'] = 'Enter link address';
 $string['insert'] = 'Insert';
 $string['cancel'] = 'Cancel';
-$string['enterflavor'] = 'Enter link';
 $string['enterlink'] = 'Enter link';
 $string['entertitle'] = 'Enter title';
 $string['enterdesc'] = 'Enter description';
