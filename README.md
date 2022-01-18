@@ -23,11 +23,11 @@ Visit your site notifications page to install the new plugins
  Dashboard -> Site administration -> Plugins -> Text editors -> Atto HTML editor -> Atto toolbar settings
 ```
 
-add linktext in `Toolbar config` box under any field
-ex: `style1 = title, bold, italic, linktext`
-Now Link text button can be found in editor box.
+- add linktext in `Toolbar config` box under any field
+- ex: `style1 = title, bold, italic, linktext`
+- Now Link text button can be found in editor box.
 
 ## NOTE:
 
 - I have used a atto plugin template to develop this plugin
-  template link: https://github.com/justinhunt/moodle-atto_newtemplate
+- template link: https://github.com/justinhunt/moodle-atto_newtemplate
