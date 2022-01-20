@@ -31,10 +31,10 @@ $settings = new admin_settingpage('atto_linktext_settings', new lang_string('set
 if ($ADMIN->fulltree) {
 	// An option setting
 	$settings->add(new admin_setting_configtext(
-		'atto_linktext/defaultlink',
-		get_string('defaultlink', 'atto_linktext'),
+		'atto_linktext/defaultlinkcss',
+		get_string('defaultlinkcss', 'atto_linktext'),
 		'',
-		'www.google.com',
+		'defaultlinkcss',
 		PARAM_TEXT
 	));
 }

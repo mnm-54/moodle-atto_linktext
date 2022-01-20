@@ -56,7 +56,7 @@ var TEMPLATE =
   '<form class="atto_form">' +
   '<div id="{{elementid}}_{{innerform}}" class="mdl-align">' +
   '<label for="{{elementid}}_{{LINK}}">{{get_string "enterlink" component}}</label>' +
-  '<input class="{{CSS.LINK}}" id="{{elementid}}_{{LINK}}" name="{{elementid}}_{{LINK}}" value="{{defaultlink}}" />' +
+  '<input class="{{CSS.LINK}}" id="{{elementid}}_{{LINK}}" name="{{elementid}}_{{LINK}}" value="" />' +
   "<br />" +
   '<label for="{{elementid}}_{{TITLE}}">{{get_string "entertitle" component}}</label>' +
   '<input class="{{CSS.TITLE}}" id="{{elementid}}_{{TITLE}}" name="{{elementid}}_{{TITLE}}" value="" />' +
@@ -151,7 +151,6 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
             elementid: this.get("host").get("elementid"),
             CSS: CSS,
             component: COMPONENTNAME,
-            defaultlink: this.get("defaultlink"),
             clickedicon: clickedicon,
           })
         );
@@ -187,7 +186,9 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
         titlevalue = link.get("value");
       }
       var output =
-        "<a href='http://" +
+        "<a class='" +
+        this.get("defaultlinkcss") +
+        "'href='http://" +
         link.get("value") +
         "' target='_blank' title='" +
         description.get("value") +
@@ -209,7 +210,7 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
         value: null,
       },
 
-      defaultlink: {
+      defaultlinkcss: {
         value: "",
       },
     },

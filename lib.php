@@ -73,7 +73,7 @@ function atto_linktext_params_for_js($elementid, $options, $fpoptions)
 	$params['disabled'] = $disabled;
 
 	//add our default link
-	$params['defaultlink'] = get_config('atto_linktext', 'defaultlink');
+	$params['defaultlinkcss'] = get_config('atto_linktext', 'defaultlinkcss');
 
 	return $params;
 }

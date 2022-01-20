@@ -35,4 +35,5 @@ $string['enterlink'] = 'Enter link';
 $string['entertitle'] = 'Enter title';
 $string['enterdesc'] = 'Enter description';
 $string['defaultlink'] = 'Default Link';
+$string['defaultlinkcss'] = 'Default CSS class';
 $string['linktext:visible'] = 'Visible';
