@@ -57,7 +57,7 @@ var TEMPLATE =
   '<input class="{{CSS.LINK}}" id="{{elementid}}_{{LINK}}" name="{{elementid}}_{{LINK}}" value="" />' +
   "<br />" +
   '<label for="{{elementid}}_{{TITLE}}">{{get_string "entertitle" component}}</label>' +
-  '<input class="{{CSS.TITLE}}" id="{{elementid}}_{{TITLE}}" name="{{elementid}}_{{TITLE}}" value="" />' +
+  '<input class="{{CSS.TITLE}}" id="{{elementid}}_{{TITLE}}" name="{{elementid}}_{{TITLE}}" value="{{selectedtext}}" />' +
   "<br />" +
   '<label for="{{elementid}}_{{description}}">{{get_string "enterdesc" component}}</label>' +
   '<input class="{{CSS.DESCRIPTION}}" id="{{elementid}}_{{description}}" name="{{elementid}}_{{description}}" value="" />' +
@@ -72,6 +72,16 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
   Y.M.editor_atto.EditorPlugin,
   [],
   {
+    /**
+     * A reference to the current selection at the time that the dialogue
+     * was opened.
+     *
+     * @property _currentSelection
+     * @type Range
+     * @private
+     */
+    _currentSelection: null,
+
     /**
      * Initialize the button
      *
@@ -143,6 +153,9 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
      * @private
      */
     _getFormContent: function (clickedicon) {
+      // Store the current selection.
+      this._currentSelection = this.get("host").getSelection();
+
       var template = Y.Handlebars.compile(TEMPLATE),
         content = Y.Node.create(
           template({
@@ -150,6 +163,7 @@ Y.namespace("M.atto_linktext").Button = Y.Base.create(
             CSS: CSS,
             component: COMPONENTNAME,
             clickedicon: clickedicon,
+            selectedtext: this._currentSelection,
           })
         );
 
